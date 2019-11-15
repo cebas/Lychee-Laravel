@@ -41,7 +41,8 @@ return [
      * Available Value: 'deny', 'sameorigin', 'allow-from <uri>'
      */
 
-    'x-frame-options' => 'deny',    // deny because we don't use frame.
+	// 'x-frame-options' => 'deny',    // deny because we don't use frame.
+	'x-frame-options' => '',        // yo si uso frame...
 
     /*
      * X-Permitted-Cross-Domain-Policies
@@ -315,7 +316,8 @@ return [
      * Note: custom-csp does not support report-only.
      */
 
-    'custom-csp' => null,
+	// 'custom-csp' => null,
+	'custom-csp' => "default-src 'self'",
 
     'csp' => [
         'report-only' => false,
