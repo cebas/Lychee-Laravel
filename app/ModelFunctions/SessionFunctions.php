@@ -29,11 +29,17 @@ class SessionFunctions
 	 */
 	public function is_logged_in()
 	{
+		// fuerzo el login. con esto lo anulo y fijo el user. es un problema de seguridad. todo: arreglarlo
+		Session::put('login', true);
+		Session::put('UserID', 1);
+		return true;
+/*
 		if (Session::get('login') === true) {
 			return true;
 		} else {
 			return false;
 		}
+*/
 	}
 
 	/**
