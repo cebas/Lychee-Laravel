@@ -1,0 +1,10 @@
+para instalar
+	clone
+	composer install
+	creart .env
+	copy 470.jpg a public/dist
+	configurar 470.jpg en advanced config
+	habilitar modulo headers en apache
+	habilitar headers en .htaccess para poder acceder desde otro dominio
+	copiar settings table desde extinto
+	ver que esten instalados los modulos de php para imagenes (GD, exif, etc)
