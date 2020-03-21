@@ -1,6 +1,14 @@
 ## dev
 
+## 6.x
+
+- 6.0.0 (unreleased)
+  - Disabled HSTS preload by default ([#42](https://github.com/BePsvPT/secure-headers/pull/42))
+
 ## 5.x
+
+- 5.6.0 (2020-03-05)
+  - Support Laravel 7.0
 
 - 5.5.0 (2019-09-07)
   - Support Laravel 6.0

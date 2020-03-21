@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 namespace Wnx\LaravelStats\Classifiers;
 
@@ -16,7 +16,8 @@ class PolicyClassifier implements Classifier
     public function satisfies(ReflectionClass $class): bool
     {
         return in_array(
-            $class->getName(), app(Gate::class)->policies()
+            $class->getName(),
+            app(Gate::class)->policies()
         );
     }
 

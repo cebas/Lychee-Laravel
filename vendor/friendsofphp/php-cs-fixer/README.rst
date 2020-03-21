@@ -46,7 +46,7 @@ or with specified version:
 
 .. code-block:: bash
 
-    $ wget https://github.com/FriendsOfPHP/PHP-CS-Fixer/releases/download/v2.16.0/php-cs-fixer.phar -O php-cs-fixer
+    $ wget https://github.com/FriendsOfPHP/PHP-CS-Fixer/releases/download/v2.16.1/php-cs-fixer.phar -O php-cs-fixer
 
 or with curl:
 
@@ -134,7 +134,7 @@ You can update ``php-cs-fixer`` through this command:
     $ brew upgrade php-cs-fixer
 
 Locally (PHIVE)
-~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~
 
 .. code-block:: bash
 
@@ -679,13 +679,13 @@ Choose from the list of available rules:
 
 * **final_public_method_for_abstract_class**
 
-  All public methods of abstract classes should be final.
+  All ``public`` methods of ``abstract`` classes should be ``final``.
 
-  *Risky rule: risky when overriding public methods of abstract classes.*
+  *Risky rule: risky when overriding ``public`` methods of ``abstract`` classes.*
 
 * **final_static_access**
 
-  Converts ``static`` access to ``self`` access in final classes.
+  Converts ``static`` access to ``self`` access in ``final`` classes.
 
 * **fopen_flag_order** [@Symfony:risky, @PhpCsFixer:risky]
 
@@ -1775,7 +1775,7 @@ Choose from the list of available rules:
 
 * **self_static_accessor**
 
-  Inside a final class or anonymous class ``self`` should be preferred to
+  Inside a ``final`` class or anonymous class ``self`` should be preferred to
   ``static``.
 
 * **semicolon_after_instruction** [@Symfony, @PhpCsFixer]
@@ -1993,7 +1993,7 @@ Config file
 
 Instead of using command line options to customize the rule, you can save the
 project configuration in a ``.php_cs.dist`` file in the root directory of your project.
-The file must return an instance of `PhpCsFixer\\ConfigInterface <https://github.com/FriendsOfPHP/PHP-CS-Fixer/blob/v2.16.0/src/ConfigInterface.php>`_
+The file must return an instance of `PhpCsFixer\\ConfigInterface <https://github.com/FriendsOfPHP/PHP-CS-Fixer/blob/v2.16.1/src/ConfigInterface.php>`_
 which lets you configure the rules, the files and directories that
 need to be analyzed. You may also create ``.php_cs`` file, which is
 the local configuration that will be used instead of the project configuration. It
@@ -2023,6 +2023,7 @@ The example below will add two rules to the default list of PSR2 set rules:
     ;
 
 **NOTE**: ``exclude`` will work only for directories, so if you need to exclude file, try ``notPath``.
+Both ``exclude`` and ``notPath`` methods accept only relative paths to the ones defined with the ``in`` method.
 
 See `Symfony\\Finder <https://symfony.com/doc/current/components/finder.html>`_
 online documentation for other `Finder` methods.
